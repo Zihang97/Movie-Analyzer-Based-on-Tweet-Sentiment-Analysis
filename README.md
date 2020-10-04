@@ -1,5 +1,5 @@
 # Movie-Analyzer-Based-on-Tweet-Sentiment-Analysis
-This is a social media analyzer which can judge the quality of movies based on sentiment analysis in related tweets.
+This is a social media analyzer which can judge the quality of movies based on sentiment analysis in relevant tweets.
 
 ## Description 
 People sometimes will tweet after watching movies to express their opinions about the movies. Based on that, I designed this movie analyzer according to the sentiment analysis of the movie-related tweets. For each movies, you can pick any number of relevant tweets and use google NLP API to analyze their sentiment. The sentiment score is -1~1 and I scale it to 0-10 as the score of movies. If overall sentiment is less than 0, the score of movies will be less than 5. In contrary, the score of movies will be larger than 5 if overall sentiment is larger than 0. Afterwards I will compare the score from my movie analyzer to the score in IMDB to see the effect of my analyzer.
