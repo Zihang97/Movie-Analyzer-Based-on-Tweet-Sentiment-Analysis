@@ -28,3 +28,6 @@ alltweets = tweepy.Cursor(api.search,q='Tenet',lang='en').items(1000)
 document = {"content": tweet, "type": type_, "language": language}
 response = client.analyze_sentiment(document, encoding_type=encoding_type)
 ```
+
+### A simple example
+I use this simple example to see if the movie analyzer works. I pick one tweet about Tenet to see its results.
