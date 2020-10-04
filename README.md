@@ -16,7 +16,7 @@ As a film viewer, I want to see what other people feel about the movie and if th
 
 
 ## Design
-The movie analyzer uses tweepy, a common tweet API, and google NLP API.
+The movie analyzer uses tweepy and google NLP API.
 
 ### Grab the relevant tweets
 ```
@@ -31,3 +31,4 @@ response = client.analyze_sentiment(document, encoding_type=encoding_type)
 
 ### A simple example
 I use this simple example to see if the movie analyzer works. I pick one tweet about Tenet to see its results.
+
