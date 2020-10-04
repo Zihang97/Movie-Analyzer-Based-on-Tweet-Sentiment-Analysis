@@ -32,3 +32,7 @@ response = client.analyze_sentiment(document, encoding_type=encoding_type)
 ### A simple example
 I use this simple example to see if the movie analyzer works. I pick one tweet about Tenet to see its results.
 
+<p align="left">
+    <img src="https://github.com/Zihang97/Movie-Analyzer-Based-on-Tweet-Sentiment-Analysis/blob/main/Picture/simple%20example.PNG" width="400"/>
+</p>
+
