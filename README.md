@@ -9,4 +9,10 @@ The basic function of movie analyzer is grabbing the tweets and analyzing the se
 
 ### User Story
 As a cinema manager, I want to see the score of each movie on show based on the analysis of people's feeling so that I can schedule the showtimes of movies tomorrow.
+
 As a movies promotion manager, I want to see people's feedback about the movie so that I can adjust the promotion strategy according to people's feeling.
+
+As a film viewer, I want to see what other people feel about the movie and if there is someone having the same feeling as mine.
+
+
+## Design
