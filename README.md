@@ -38,3 +38,8 @@ I use this simple example to see if the movie analyzer works. I pick one tweet a
 
 ## Results
 Here is the results for some movies on show. Each movies I use 100 tweets to judge as my computer run quite slowly.
+
+| Movie  | Score   |IMDb |
+|------  |---------|-----|
+| Tenet  | 5.35    | 7.8 |
+|Hocus Pocus|       | 6.9 |
