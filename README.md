@@ -2,7 +2,7 @@
 This is a social media analyzer which can judge the quality of movies based on sentiment analysis in related tweets.
 
 ## Description 
-People sometimes will tweet after watching movies to express their opinions about the movies. Based on that, I designed this movie analyzer according to the sentiment analysis of the movie-related tweets. For each movies, I pick 1000 relevant tweets and use google NLP API to analyze their sentiment. The sentiment score is -1~1 and I scale it to 0-10 as the score of movies. If overall sentiment is less than 0, the score of movies will be less than 5. In contrary, the score of movies will be larger than 5 if overall sentiment is larger than 0. Afterwards I will compare the score from my movie analyzer to the score in IMDB to see the effect of my analyzer.
+People sometimes will tweet after watching movies to express their opinions about the movies. Based on that, I designed this movie analyzer according to the sentiment analysis of the movie-related tweets. For each movies, you can pick any number of relevant tweets and use google NLP API to analyze their sentiment. The sentiment score is -1~1 and I scale it to 0-10 as the score of movies. If overall sentiment is less than 0, the score of movies will be less than 5. In contrary, the score of movies will be larger than 5 if overall sentiment is larger than 0. Afterwards I will compare the score from my movie analyzer to the score in IMDB to see the effect of my analyzer.
 
 ### MVP (Minimum Value Product)
 The basic function of movie analyzer is grabbing the tweets and analyzing the sentiment of texts.
@@ -20,7 +20,7 @@ The movie analyzer uses tweepy and google NLP API.
 
 ### Grab the relevant tweets
 ```
-alltweets = tweepy.Cursor(api.search,q='Tenet',lang='en').items(1000)
+alltweets = tweepy.Cursor(api.search,q=film,lang='en').items(number)
 ```
 
 ### Analyze the sentiment
@@ -36,3 +36,5 @@ I use this simple example to see if the movie analyzer works. I pick one tweet a
     <img src="https://github.com/Zihang97/Movie-Analyzer-Based-on-Tweet-Sentiment-Analysis/blob/main/Picture/simple%20example.PNG" width="600"/>
 </p>
 
+## Results
+Here is the results for some movies on show. Each movies I use 100 tweets to judge as my computer run quite slowly.
