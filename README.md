@@ -16,3 +16,15 @@ As a film viewer, I want to see what other people feel about the movie and if th
 
 
 ## Design
+The movie analyzer uses tweepy, a common tweet API, and google NLP API.
+
+### Grab the relevant tweets
+```
+alltweets = tweepy.Cursor(api.search,q='Tenet',lang='en').items(1000)
+```
+
+### Analyze the sentiment
+```
+document = {"content": tweet, "type": type_, "language": language}
+response = client.analyze_sentiment(document, encoding_type=encoding_type)
+```
