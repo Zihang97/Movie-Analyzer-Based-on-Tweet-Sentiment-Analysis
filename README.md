@@ -8,7 +8,7 @@ People sometimes will tweet after watching movies to express their opinions abou
 The basic function of movie analyzer is grabbing the tweets and analyzing the sentiment of texts.
 
 ### User Story
-As a cinema manager, I want to see the score of each movie on show based on the analysis of people's feeling so that I can schedule the showtimes of movies tomorrow.
+As a cinema manager, I want to see the score of each movie playing based on the analysis of people's feeling so that I can schedule the showtimes of movies tomorrow.
 
 As a movies promotion manager, I want to see people's feedback about the movie so that I can adjust the promotion strategy according to people's feeling.
 
@@ -20,6 +20,7 @@ The movie analyzer uses tweepy and google NLP API.
 
 ### Grab the relevant tweets
 ```
+api = tweepy.API(auth)
 alltweets = tweepy.Cursor(api.search,q=film,lang='en').items(number)
 ```
 
@@ -37,9 +38,13 @@ I use this simple example to see if the movie analyzer works. I pick one tweet a
 </p>
 
 ## Results
-Here is the results for some movies on show. Each movies I use 100 tweets to judge as my computer run quite slowly.
+Here is the results for some movies playing. Each movies I use 100 tweets to judge as my computer run quite slowly.
 
 | Movie  | Score   |IMDb |
 |------  |---------|-----|
 | Tenet  | 5.35    | 7.8 |
-|Hocus Pocus|       | 6.9 |
+|Hocus Pocus| 4.9   | 6.9 |
+|Kajillionaire|  5.6  | 6.4 |
+|Unhinged |   4.5      | 6.1|
+
+I find that the score of movie analyzer is close to 5, which means that most people wouldn't show very strong emotions about moives. There exists some difference between my scores and IMDb scores. The reasons may lie in that I only use 100 tweets for each movies, I should scale more properly like 0 to 7 and people tend to be more straightforward in tweet rather than IMDb. So many people may show negtive sentiment on tweet, but don't rate low scores on IMDb.
