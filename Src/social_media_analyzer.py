@@ -1,6 +1,6 @@
 # coding: utf-8
-from google.cloud import language_v1
-from google.cloud.language_v1 import enums
+#from google.cloud import language_v1
+#from google.cloud.language_v1 import enums
 import tweepy
 import os
 
