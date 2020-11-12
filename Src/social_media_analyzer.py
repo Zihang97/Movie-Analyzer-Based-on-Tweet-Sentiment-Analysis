@@ -29,7 +29,8 @@ def analyze_sentiment(tweet):
     # return overall sentiment of the input document
     return [response.document_sentiment.score,response.document_sentiment.magnitude]
 
-if __name__ == '__main__':
+
+def movie_analyzer(filmname,tweets_number):
     scores,magnitudes=[],[]
     
     # get relevant tweets
@@ -44,8 +45,11 @@ if __name__ == '__main__':
     finalscore=(sum(scores)/len(scores))*5+5
     finalmagnitude=sum(magnitudes)/len(magnitudes)
     
+    return [finalscore, finalmagnitude]
+
+if __name__ == '__main__':
+    output=movie_analyzer(filmname,tweets_number)
+    
     # print the final outputs
-    print(f"The score of movie {filmname} is", finalscore)
-    print(f"The magnitude of movie {filmname} is", finalmagnitude)
-
-
+    print(f"The score of movie {filmname} is", output[0])
+    print(f"The magnitude of movie {filmname} is", output[1])
