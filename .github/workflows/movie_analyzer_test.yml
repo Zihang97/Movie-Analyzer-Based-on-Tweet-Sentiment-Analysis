@@ -40,5 +40,5 @@ jobs:
         ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}  
         GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
       run: |
-        echo "$GOOGLE_APPLICATION_CREDENTIALS" >> cloud_natural_language_api.json
+        echo "$GOOGLE_APPLICATION_CREDENTIALS" >> google_application_credentials.json
         pytest
