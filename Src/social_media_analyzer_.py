@@ -3,10 +3,10 @@ from google.cloud import language_v1
 from google.cloud.language_v1 import enums
 import tweepy
 
-consumer_key = "Enter the consumer_key"
-consumer_secret = "Enter the consumer_secret"
-access_key = "Enter the access_key"
-access_secret = "Enter the access_secret"
+access_key = os.getenv('ACCESS_KEY')
+access_secret = os.getenv('ACCESS_SECRET')
+consumer_key = os.getenv('CONSUMER_KEY')
+consumer_secret = os.getenv('CONSUMER_SECRET')
 filmname = "Enter the filmname you want to judge"
 tweets_number = "Enter the number of tweets you want to judge from"
 
@@ -57,7 +57,7 @@ if __name__ == '__main__':
     finalmagnitude=sum(magnitudes)/len(magnitudes)
     
     # print the final outputs
-    print("The score of movie",filmname,"is", finalscore)
-    print("The magnitude of movie",filmname,"is", finalmagnitude)
+    print(f"The score of {filmname} is", finalscore)
+    print(f"The magnitude of {filmname} is", finalmagnitude)
 
 
