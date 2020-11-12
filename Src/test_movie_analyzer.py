@@ -7,7 +7,7 @@ class Testmovieanalyzer:
 			movie_analyzer()
 
 	def test_movie_analyzer_Hocus_Pocus(self):
-		assert movie_analyzer("Hocus Pocus",10)[0] < 5
+		assert movie_analyzer("Hocus Pocus",10)[0] > 5
 		
 	def test_movie_analyzer_Unhinged(self):
 		assert movie_analyzer("Unhinged",10)[0] < 5
@@ -16,4 +16,4 @@ class Testmovieanalyzer:
 		assert movie_analyzer("Tenet",10)[0] > 5
 		
 	def test_movie_analyzer_Kajillionaire(self):
-		assert movie_analyzer("Kajillionaire",10)[0] > 5
+		assert movie_analyzer("Kajillionaire",10)[0] < 5
