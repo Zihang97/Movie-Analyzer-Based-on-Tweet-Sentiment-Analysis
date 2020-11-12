@@ -1,2 +1,2 @@
 tweepy
-google-cloud-language
+--upgrade google-cloud-language
