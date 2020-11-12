@@ -1,27 +1,12 @@
 # coding: utf-8
-#from google.cloud import language_v1
-#from google.cloud.language_v1 import enums
+from google.cloud import language_v1
+from google.cloud.language_v1 import enums
 import tweepy
 import os
+from twitter import grab_tweets
 
-access_key = os.getenv('ACCESS_KEY')
-access_secret = os.getenv('ACCESS_SECRET')
-consumer_key = os.getenv('CONSUMER_KEY')
-consumer_secret = os.getenv('CONSUMER_SECRET')
 filmname = "Enter the filmname you want to judge"
 tweets_number = "Enter the number of tweets you want to judge from"
-
-def grab_tweets(film,number):
-    # authentication
-    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-    auth.set_access_token(access_key, access_secret)
-
-    api = tweepy.API(auth,wait_on_rate_limit=True)
-    
-    # search the relevant tweets 
-    alltweets = tweepy.Cursor(api.search,q=film,lang='en',result_type='recent').items(number)
-    return alltweets
-
 
 def sample_analyze_sentiment(tweet):
     client = language_v1.LanguageServiceClient()
