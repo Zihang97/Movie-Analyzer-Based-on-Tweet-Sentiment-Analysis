@@ -1,5 +1,6 @@
 # Unit Test
-I use pytest to test my movie analyzer. The details can be seen in [Actions](https://github.com/Zihang97/Movie-Analyzer-Based-on-Tweet-Sentiment-Analysis/actions)
+I use pytest to test my movie analyzer. The details can be seen in [Actions](https://github.com/Zihang97/Movie-Analyzer-Based-on-Tweet-Sentiment-Analysis/actions).
+
 For both twitter and google nlp functions I use multiple test cases including no input, empty string and other conditions. 
 
 # Movie-Analyzer-Based-on-Tweet-Sentiment-Analysis
