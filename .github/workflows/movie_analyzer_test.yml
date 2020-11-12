@@ -38,6 +38,7 @@ jobs:
         CONSUMER_SECRET:  ${{ secrets.CONSUMER_SECRET }} 
         ACCESS_KEY: ${{ secrets.ACCESS_KEY }}
         ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}  
+        GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
       run: |
         echo "$GOOGLE_APPLICATION_CREDENTIALS" >> cloud_natural_language_api.json
         pytest
