@@ -57,7 +57,7 @@ if __name__ == '__main__':
     finalmagnitude=sum(magnitudes)/len(magnitudes)
     
     # print the final outputs
-    print(f"The score of {filmname} is", finalscore)
-    print(f"The magnitude of {filmname} is", finalmagnitude)
+    print(f"The score of movie {filmname} is", finalscore)
+    print(f"The magnitude of movie {filmname} is", finalmagnitude)
 
 
