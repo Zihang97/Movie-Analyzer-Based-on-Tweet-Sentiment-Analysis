@@ -1,6 +1,5 @@
 import pytest
 from social_media_analyzer import analyze_sentiment
-from social_media_analyzer import movie_analyzer
 
 class Testnlp:
 	def test_analyze_sentiment_no_input(self):
