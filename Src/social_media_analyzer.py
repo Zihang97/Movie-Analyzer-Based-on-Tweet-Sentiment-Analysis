@@ -8,6 +8,8 @@ from twitter import grab_tweets
 filmname = "Enter the filmname you want to judge"
 tweets_number = "Enter the number of tweets you want to judge from"
 
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "cloud_natural_language_api.json"
+    
 def analyze_sentiment(tweet):
     client = language_v1.LanguageServiceClient()
 
