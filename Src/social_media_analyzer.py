@@ -2,6 +2,7 @@
 from google.cloud import language_v1
 from google.cloud.language_v1 import enums
 import tweepy
+import os
 
 access_key = os.getenv('ACCESS_KEY')
 access_secret = os.getenv('ACCESS_SECRET')
