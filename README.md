@@ -3,7 +3,7 @@ I use pytest to test my movie analyzer. The details can be seen in [Actions](htt
 
 For both twitter and google nlp functions I use multiple test cases including no input, empty string and other conditions. 
 
-Totally I wrote three test files which can be seen in [src](src/), including test_twitter.py for twitter testing, test_nlp.py for google nlp testing and test_movie_analyzer for whole model testing.
+Totally I wrote three test files which can be seen in [Src](Src/), including test_twitter.py for twitter testing, test_nlp.py for google nlp testing and test_movie_analyzer for whole model testing.
 
 # Movie-Analyzer-Based-on-Tweet-Sentiment-Analysis
 This is a social media analyzer which can judge the quality of movies based on sentiment analysis in relevant tweets.
