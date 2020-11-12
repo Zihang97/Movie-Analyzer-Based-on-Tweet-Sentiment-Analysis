@@ -1,5 +1,5 @@
 import pytest
-from social_media_analyzer import grab_tweets
+from twitter import grab_tweets
 
 class Testtwtter:
 	def test_grap_twitter_no_input(self):
