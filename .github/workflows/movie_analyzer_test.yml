@@ -34,7 +34,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - uses: actions-hub/gcloud@master
       env:
-        PROJECT_ID: test
+        PROJECT_ID: project2-sentiment-analysis
         APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
       with:
         args: info
