@@ -21,12 +21,6 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
-    - uses: actions-hub/gcloud@master
-      env:
-        PROJECT_ID: ${{ secrets.GLP_PROJECT_ID }}
-        APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
-      with:
-        args: info
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -45,5 +39,5 @@ jobs:
         ACCESS_KEY: ${{ secrets.ACCESS_KEY }}
         ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}  
       run: |
-        export GOOGLE_APPLICATION_CREDENTIALS=${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+        echo "$GOOGLE_APPLICATION_CREDENTIALS" >> cloud_natural_language_api.json
         pytest
