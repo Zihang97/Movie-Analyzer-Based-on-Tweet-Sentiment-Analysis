@@ -7,13 +7,13 @@ class Testmovieanalyzer:
 			movie_analyzer()
 
 	def test_movie_analyzer_Hocus_Pocus(self):
-		assert movie_analyzer("Hocus Pocus",10)[0] > 5
+		assert 6.9 - movie_analyzer("Hocus Pocus",10)[0] < 3 
 		
 	def test_movie_analyzer_Unhinged(self):
-		assert movie_analyzer("Unhinged",10)[0] < 5
+		assert 6.1 - movie_analyzer("Unhinged",10)[0] < 3
 		
 	def test_movie_analyzer_Tenet(self):
-		assert movie_analyzer("Tenet",10)[0] > 5
+		assert 7.8 - movie_analyzer("Tenet",10)[0] < 3
 		
 	def test_movie_analyzer_Kajillionaire(self):
-		assert movie_analyzer("Kajillionaire",10)[0] < 5
+		assert 6.4 - movie_analyzer("Kajillionaire",10)[0] < 3
