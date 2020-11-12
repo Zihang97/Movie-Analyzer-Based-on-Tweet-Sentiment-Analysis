@@ -8,7 +8,7 @@ from twitter import grab_tweets
 filmname = "Enter the filmname you want to judge"
 tweets_number = "Enter the number of tweets you want to judge from"
 
-def sample_analyze_sentiment(tweet):
+def analyze_sentiment(tweet):
     client = language_v1.LanguageServiceClient()
 
     # Available types: PLAIN_TEXT, HTML
@@ -35,8 +35,8 @@ if __name__ == '__main__':
     
     for tweet in tweets:
         # analyze each tweet
-        scores+=[sample_analyze_sentiment(tweet.text)[0]]
-        magnitudes+=[sample_analyze_sentiment(tweet.text)[1]]
+        scores+=[analyze_sentiment(tweet.text)[0]]
+        magnitudes+=[analyze_sentiment(tweet.text)[1]]
     
     # compute the averages
     finalscore=(sum(scores)/len(scores))*5+5
